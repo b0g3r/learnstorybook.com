@@ -301,6 +301,11 @@ export default ({ data: { site: { siteMetadata: { toc, defaultTranslation } }, p
                   <ViewLayerImage src="/logo-vue.svg" alt="Vue"/>Português
                 </Button>
               </Link>
+              <Link isGatsby to={`/vue/ru/${firstChapter}`}>
+                <Button inverse>
+                  <ViewLayerImage src="/logo-vue.svg" alt="Vue"/>Русский
+                </Button>
+              </Link>
             </Actions>
           </Pitch>
 
