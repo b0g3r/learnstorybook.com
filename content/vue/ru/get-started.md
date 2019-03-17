@@ -1,55 +1,54 @@
 ---
-title: "Get started"
-tocTitle: "Get started"
-description: "Setup Vue Storybook in your development environment"
-commit: d1c4858
+title: "Начало работы"
+tocTitle: "Начало работы"
+description: "Устанавливаем Vue Storybook в окружение для разработки"
 ---
 
-# Get started
+# Начало работы
 
-Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app. This edition of Learn Storybook is for Vue; other editions exist for [React](/react/en/get-started) and [Angular](/angular/en/get-started).
+Storybook работает вместе с твоим приложением в режиме разработки. Он помогает тебе строить UI компоненты, изолированные от бизнес-логики и контекста твоего приложения. Это редакция Learn Storybook для Vue; также существуют редакции для [React](/react/en/get-started) и [Angular](/angular/en/get-started).
 
-![Storybook and your app](/storybook-relationship.jpg)
+![Storybook и твоё приложение](/storybook-relationship.jpg)
 
-## Setup Vue Storybook
+## Установка Vue Storybook
 
-We’ll need to follow a few steps to get the build process set up in your environment. To start with, we want to use the [Vue CLI](https://cli.vuejs.org) to setup our build system, and enable [Storybook](https://storybook.js.org/) and [Jest](https://facebook.github.io/jest/) testing in our created app. Let’s run the following commands:
+Нам нужно сделать несколько шагов, чтобы настроить процесс сборки в твоём окружении. Для начала мы хотим использовать [Vue CLI](https://cli.vuejs.org) для настройки нашей системы сборки и включить [Storybook](https://storybook.js.org/) и [Jest](https://facebook.github.io/jest/) тестирование в нашем созданном приложении. Давай запустим следующие команды:
 
 ```bash
-# Create our application, using a preset that contains jest:
+# Создаёт наше приложение, используя предустановку с jest:
 npx -p @vue/cli vue create --preset hichroma/vue-preset-learnstorybook taskbox
 cd taskbox
 
-# Add Storybook:
+# Добавляет Storybook:
 npx -p @storybook/cli sb init
 ```
 
-We can quickly check that the various environments of our application are working properly:
+Мы можем быстро проверить, что разные окружения нашего приложения работают как надо:
 
 ```bash
-# Run the test runner (Jest) in a terminal:
+# Запускает тесты (Jest) в терминале:
 yarn test:unit
 
-# Start the component explorer on port 6006:
+# Запускает the component explorer на 6006 порту:
 yarn run storybook
 
-# Run the frontend app proper on port 8080:
+# Запускает фронтенд-приложение на 8080 порту:
 yarn serve
 ```
 
 <div class="aside">
-  NOTE: If <code>yarn test:unit</code> throws an error, you may not have <a href="https://yarnpkg.com/lang/en/docs/install/">yarn installed</a> or you may need to install <code>watchman</code> as advised in <a href="https://github.com/facebook/create-react-app/issues/871#issuecomment-252297884">this issue</a>.
+  NOTE: Если <code>yarn test:unit</code> выбрасывает ошибку, возможно у тебя не <a href="https://yarnpkg.com/lang/en/docs/install/">установлен yarn</a> тебе нужно поставить <code>watchman</code> как указано в <a href="https://github.com/facebook/create-react-app/issues/871#issuecomment-252297884">этом issue</a>.
 </div>
 
-Our three frontend app modalities: automated test (Jest), component development (Storybook), and the app itself.
+Наши три сущности фронтенд-приложения: автоматизированные тесты (Jest), компонентная разработка (Storybook) и само приложение.
 
-![3 modalities](/app-three-modalities-vue.png)
+![3 сущности](/app-three-modalities-vue.png)
 
-Depending on what part of the app you’re working on, you may want to run one or more of these simultaneously. Since our current focus is creating a single UI component, we’ll stick with running Storybook.
+В зависимости от того, над какой частью приложения ты работаешь, ты можешь захотеть запустить одну или несколько этих сущностей одновременно. Поскольку сейчас мы сфокусированы на создании одного UI-компонента, мы продолжим c запущенным Storybook.
 
-## Reuse CSS
+## Переиспользование CSS
 
-Taskbox reuses design elements from the GraphQL and React Tutorial [example app](https://blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858), so we won’t need to write CSS in this tutorial. We’ll simply compile the LESS to a single CSS file and include it in our app. Copy and paste [this compiled CSS](https://github.com/hichroma/learnstorybook-code/blob/master/src/index.css) into `src/index.css` and then import the CSS into the app by editing the `<style>` tag in `src/App.vue` so it looks like:
+Taskbox переиспользует элементы дизайна из [примера приложения](https://blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858) для туториала по GraphQL и React, так что нам не нужно будет писать CSS в этом туториале. Мы просто скомпилируем LESS в один CSS файл и подключим его к нашему приложению. Скопируй и вставь этот [скомпилированный CSS](https://github.com/hichroma/learnstorybook-code/blob/master/src/index.css) в `src/index.css` и затем импортируй его в приложение, измененив тег `<style>` в `src/App.vue`, чтобы он выглядел вот так:
 
 ```html
 <style>
@@ -60,14 +59,14 @@ Taskbox reuses design elements from the GraphQL and React Tutorial [example app]
 ![Taskbox UI](/ss-browserchrome-taskbox-learnstorybook.png)
 
 <div class="aside">
-If you want to modify the styling, the source LESS files are provided in the GitHub repo.
+Если ты захочешь изменить стили, то ты сможешь найти исходный LESS-файл в GitHub репозитории.
 </div>
 
-## Add assets
+## Добавление ресурсов
 
-We also need to add the font and icon [directories](https://github.com/hichroma/learnstorybook-code/tree/master/public) to the `public/` folder.
+Нам также нужно добавить [шрифты и иконки](https://github.com/hichroma/learnstorybook-code/tree/master/public) в папку `public/`.
 
-We also need to update our storybook script to serve the `public` directory (in `package.json`):
+Также нам потребуется обновить наш скрипт для сборки storybook, чтобы он собирался в папку `public` (файл `package.json`):
 
 ```json
 {
@@ -77,4 +76,4 @@ We also need to update our storybook script to serve the `public` directory (in 
 }
 ```
 
-After adding styling and assets, the app will render a bit strangely. That’s OK. We aren’t working on the app right now. We’re starting off with building our first component!
+После добавление стилей и ресурсов приложение может отображаться немного странно. Это нормально, мы ещё не начали работать над приложением. Мы начинаем со строительства нашего первого компонента!
