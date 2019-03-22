@@ -37,7 +37,7 @@ yarn serve
 ```
 
 <div class="aside">
-  NOTE: Если <code>yarn test:unit</code> выбрасывает ошибку, возможно у тебя не <a href="https://yarnpkg.com/lang/en/docs/install/">установлен yarn</a> или тебе нужно поставить <code>watchman</code> как указано в <a href="https://github.com/facebook/create-react-app/issues/871#issuecomment-252297884">этом issue</a>.
+  NOTE: Если <code>yarn test:unit</code> выбрасывает ошибку, возможно у тебя не <a href="https://yarnpkg.com/lang/en/docs/install/">установлен yarn</a> или тебе нужно поставить <code>watchman</code>, как указано в <a href="https://github.com/facebook/create-react-app/issues/871#issuecomment-252297884">этом issue</a>.
 </div>
 
 Наши три сущности фронтенд-приложения: автоматизированные тесты (Jest), компонентная разработка (Storybook) и само приложение.
