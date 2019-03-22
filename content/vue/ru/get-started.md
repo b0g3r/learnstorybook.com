@@ -48,7 +48,7 @@ yarn serve
 
 ## Переиспользование CSS
 
-Taskbox переиспользует элементы дизайна из [примера приложения](https://blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858) для туториала по GraphQL и React, так что нам не нужно будет писать CSS в этом туториале. Мы просто скомпилируем LESS в один CSS файл и подключим его к нашему приложению. Скопируй и вставь этот [скомпилированный CSS](https://github.com/hichroma/learnstorybook-code/blob/master/src/index.css) в `src/index.css` и затем импортируй его в приложение, измененив тег `<style>` в `src/App.vue`, чтобы он выглядел вот так:
+Taskbox переиспользует элементы дизайна из [примера приложения](https://blog.hichroma.com/graphql-react-tutorial-part-1-6-d0691af25858) для туториала по GraphQL и React, так что нам не нужно будет писать CSS в этом туториале. Мы просто скомпилируем LESS в один CSS файл и подключим его к нашему приложению. Скопируй и вставь этот [скомпилированный CSS](https://github.com/hichroma/learnstorybook-code/blob/master/src/index.css) в `src/index.css` и затем импортируй его в приложение, изменив тег `<style>` в `src/App.vue`, чтобы он выглядел вот так:
 
 ```html
 <style>
