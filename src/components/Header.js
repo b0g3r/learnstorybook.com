@@ -262,6 +262,13 @@ export default function Header({ githubUrl, inverse, framework, firstChapter, is
                           >
                             Português
                           </LanguageLink>
+                          <LanguageLink
+                            className="tertiary"
+                            isGatsby
+                            to={`/vue/ru/${firstChapter}/`}
+                          >
+                            Русский
+                          </LanguageLink>
                         </Detail>
                       </Meta>
                     </TooltipItem>
